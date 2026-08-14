@@ -320,8 +320,6 @@ async function Planets() {
 
     response = await response.json();
 
-    console.log(response);
-
     displayPlanets(response);
   } catch (error) {
     console.error("Error fetching planets:", error);
@@ -517,7 +515,7 @@ function displayPlanetDetails(planet) {
     planet.discoveredBy || "Known since antiquity";
 
   document.querySelector("#planet-discovery-date").innerHTML =
-    planet.discoveryDate || "Ancient";
+    planet.discoveryDate || "Ancient times";
 
   document.querySelector("#planet-body-type").innerHTML =
     planet.bodyType || "Planet";
